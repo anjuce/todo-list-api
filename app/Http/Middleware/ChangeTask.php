@@ -4,20 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
-use App\Domain\Entity\AuthAssignment;
-use App\Domain\Entity\UserSite;
-use App\Domain\Repository\AuthAssignmentRepository;
 use App\Domain\Repository\TaskRepository;
-use App\Domain\Repository\UserSiteRepository;
-use App\Enum\BaseStatus;
-use App\Enum\RbacActionsEnum;
-use App\Enum\Role;
-use App\Enum\StudySiteStatus;
-use App\Services\RBACService;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Exceptions\UnauthorizedException;
 
 class ChangeTask
 {
